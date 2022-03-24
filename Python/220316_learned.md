@@ -4,9 +4,10 @@
 > Contents
 > * gcd(최대공약수), lcm(최소공배수) 함수
 > * divmod 함수
+> * Counter 클래스
 
 
-### gcd & lcm
+### <strong>gcd & lcm</strong>
 ---
 gcd 함수는 파이썬 버전 3.5에 최초로 추가됨
 ### math.gcd 함수
@@ -24,7 +25,7 @@ math.gcd(3, 6, 9) # 3 반환
 ```
 
 lcm 함수는 파이썬 버전 3.9에 최초로 추가됨
-### math.lcm 함수
+### <strong>math.lcm 함수</strong>
 * 함수 모양
   * *math.lcm(num)*
 * 함수 설명
@@ -61,3 +62,19 @@ def solution(n, base):
         answer += str(mod)
     return answer[::-1]
 ```
+
+### <strong>collections.Counter 클래스</strong>
+---
+* collection 모듈의 클래스로 'from collections import Counter' 필수로 작성
+* dictionary를 확장한 것으로, dictionary에서 제공하는 API그대로 사용 가능함
+* 예제 
+```python 
+from collections import Counter
+
+Counter('hello') 
+# Counter({'l': 2, 'h': 1, 'e': 1, 'o': 1})
+
+Counter('hello').most_common() # 데이터 개수가 많은 순으로 정렬
+# [('l', 2), ('h', 1), ('e', 1), ('o', 1)]
+```
+
